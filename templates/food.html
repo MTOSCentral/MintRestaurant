@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block webtitle %}Order - Thing{% endblock %}
+{% block productname %}MintRestaurant{% endblock %}
+{% block body %}
+{{food.Name}}
+{% for Option in food.Options.Options %}
+    <h2>{{Option.Name}}</h2>
+    {% for sel in Option.Selections %}
+        <input type="number" max={{sel.Max}} min=0 value="0"><p>{{sel.Name}}</p>
+    {% endfor %}
+{% endfor %}
+{% endblock %}
+{% block footer %}&copy; 2021-2022 Meow Tech Open Source{% endblock %}

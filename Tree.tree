@@ -1,0 +1,13 @@
+Options Object(Food.Options):
+	(Options Variable)(Food.Options.Options)[
+        Option Object:
+            (Selections Variable)[
+                Selection Object
+                Selection Object
+            ]
+        Option Object:
+            (Selections Variable)[
+                Selection Object
+                Selection Object
+            ]    
+	]

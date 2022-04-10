@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block webtitle %}Order - Thing{% endblock %}
+{% block productname %}MintRestaurant{% endblock %}
+{% block body %}
+{% for cat in cater %}
+    {% if is_between(now(),cat.Time) %}
+        <h1>{{cat.Name}}</h1>
+        {% for food in foods %}
+            {% if food.Catergory == cat.ID %}
+                <h4>{{food.Name}} ${{food.Price}}</h4>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endfor %}
+{% endblock %}
+{% block footer %}&copy; 2021-2022 Meow Tech Open Source{% endblock %}
